@@ -9,7 +9,8 @@ typedef struct {
     ElemType data[MaxSize];
     int length;
 }SqList;
-int CreatList(SqList *L, data[], int n)
+
+int CreatList(SqList *L,ElemType data[], int n)
 {
     if (n > MaxSize) { printf("顺序表的空间不够，无法建立顺序表\n"); return 0; }
     for (int i = 0; i < n; i++)
@@ -17,6 +18,7 @@ int CreatList(SqList *L, data[], int n)
     L->length = n;
     return 1;
 }
+
 void PrintList(SqList *L)
 {
     for(int i=0;i<=L->length;i++){
@@ -44,18 +46,17 @@ int ListInsert(SqList *L,int i,ElemType e){
 
 
 
-int main(){
-
-    int r[5]={1,2,3,4,5},i,x;
-    SqList L;
-    CreatList(&L,r,5);
-    printf("当前线性表的数据为\n");
-    PrintList(&L);                      /*输出当前线性表1 2 3 4 5*/
-
-
-
-
+//int main(){
 //
+//    int r[5]={1,2,3,4,5},i,x;
+//    SqList L;
+//    CreatList(&L,r,5);
+//    printf("当前线性表的数据为\n");
+//    PrintList(&L);                      /*输出当前线性表1 2 3 4 5*/
+
+
+
+
 //    int arr[]={1,2,3,4,5,5,4,3,2,1,7,7,-9,-9,9};
 //    int sz=sizeof(arr)/sizeof (int );
 //    int ret=0;
@@ -64,14 +65,13 @@ int main(){
 //    }
 //    printf("单身狗是:%d\n",ret);
 
-
-
-
-
 //    int sum1=0;
 //    int sum2=0;
 //    scanf("%d%d",&sum1,&sum2);
 //    int sum=sum1+sum2;
 //    printf("sum1+sum2=%d\n",sum);
 //    return 0;
-}
+
+
+
+//}
